@@ -32,7 +32,7 @@
 					<div class="row align-items-center">
 						<div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
 							<h2 class="resume-name mb-0 text-uppercase">Geoff Rollins</h2>
-							<div class="resume-tagline mb-3 mb-md-0">Data Scientist | Data Engineer | Biophysics PhD</div>
+							<div class="resume-tagline mb-3 mb-md-0">Data Scientist | Analytics Engineer | Biophysics PhD</div>
 						</div><!--//resume-title-->
 						<div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
 							<ul class="list-unstyled mb-0">
@@ -51,9 +51,10 @@
 						<img class="resume-profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="assets/images/geoff.png" alt="image">
 						<div class="media-body text-left">
 							<ul class="resume-list">
-								<li>Data Scientist with strong quantitative background that spans data science, data engineering, and physics</li>
-								<li>4+ years experience working in a fast-paced tech startup environment with extensive remote experience</li>
-								<li>10+ yrs experience with Python; 4+ yrs experience with R and SQL; 2 yrs experience with web frameworks (django, angular)</li>
+								<li>Data Scientist with strong quantitative background that spans data science, analytics engineering, and physics</li>
+								<li>6+ years experience working with petascale data in a fast-paced tech startup environment with extensive remote experience</li>
+								<li>10+ yrs experience with Python; 6+ yrs experience with R and SQL</li>
+								<li>Delivers end-to-end data science projects: from measurement strategy and statistical inference to data pipelines to dashboarding to deep-dive reports</li>
 								<li>Passionate about refactoring legacy code to mitigate technical debt, guided by tests</li>
 								<li>Effective communicator – experienced in writing and presenting reports to both business and technical audiences</li>
 							</ul>
@@ -68,12 +69,14 @@
 								<h3 class="text-uppercase resume-section-heading mb-4">Work History</h3>
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Data Scientist | Atlassian</h4>
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Senior Data Scientist | Atlassian (Trello team)</h4>
 										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">2020 - present</div>
 									</div>
 									<div class="item-content">
 										<ul class="resume-list">
-											<li>Trello data science team</li>
+											<li>Worked closely with PMs on measurement goals and strategy for new feature launches</li>
+											<li>Applied causal methods to quantify the impact of an important feature launch on monetization when a/b testing wasn’t available</li>
+											<li>Analytics engineering: built dozens of data pipelines and dashboards for analysis and reporting using Databricks and Mode</li>
 										</ul>
 									</div>
 								</div><!--//item-->
@@ -99,7 +102,7 @@
 									</div>
 									<div class="item-content">
 										<ul class="resume-list">
-											<li>Refactored and optimized key data pipelines in Hive and Luigi to stabilize and speed up operational reporting for Customer Analytics team, eliminating significant technical debt along the way</li>
+											<li>Focused on analytics engineering: refactored and optimized key data pipelines in Hive and Luigi to stabilize and speed up operational reporting for Customer Analytics team, eliminating significant technical debt along the way</li>
 											<li>Built dashboards using in-house Tableau-like platform to track Dropbox Help Center traffic</li>
 										</ul>
 									</div>
@@ -117,83 +120,51 @@
 										</ul>
 									</div>
 								</div><!--//item-->
-								<div class="item">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Scientific Software Developer | Freelance</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">2013 - 2014</div>
-
-									</div>
-									<div class="item-content">
-										<ul class="resume-list">
-											<li>Developed web apps for academic clients to communicate scientific findings to a wider audience using Django and AngularJS deployed on Google Cloud and Digital Ocean.</li>
-											<li>Developed <a href="https://sophia-web.appspot.com/">Sophia</a>, a GUI-based molecular simulation tool written in Python (see below)</li>
-										</ul>
-									</div>
-								</div><!--//item-->
-
 							</section><!--//work-section-->
-
-							<section class="project-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Work Samples</h3>
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Sophia</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">Open Source</div>
-
-									</div>
-									<div class="item-content">
-										<p>Sophia is an educational molecular simulation package. The goal of Sophia is to provide a gentle on-ramp for newcomers to all-atom molecular simulation methods (energy minimization, molecular dynamics, simulated annealing, monte carlo sampling, etc.). Production simulation tools, like Gromacs and OpenMM, are designed for performance, whereas Sophia is designed as an interactive teaching and learning tool for small-scale simulations. Sophia is implemented in Python (~5K lines) as a plugin to UCSF's <a href="https://www.cgl.ucsf.edu/chimera/">Chimera</a>.</p>
-										<ul class="resume-list">
-											<li><a href="https://sophia-web.appspot.com/" class="theme-link">Link to Docs</a></li>
-											<li><a href="https://bitbucket.org/grollins/sophia/src/master/" class="theme-link">Link to Source</a></li>
-										</ul>
-									</div>
-								</div><!--//item-->
-							</section><!--//project-section-->
 						</div><!--//resume-main-->
 						<aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
 							<section class="skills-section py-3">
 								<h3 class="text-uppercase resume-section-heading mb-4">Skills</h3>
+								    <div class="item">
+										<h4 class="item-title">Stats/ML</h4>
+										<ul class="list-unstyled resume-skills-list">
+											<li class="mb-2">linear & logistic regression, decision tree, random forest, bayesian models (pymc3, stan), A/B testing, causal methods<li>
+										</ul>
+									</div><!--//item-->
 									<div class="item">
 										<h4 class="item-title">Python</h4>
 										<ul class="list-unstyled resume-skills-list">
-											<li class="mb-2">numpy, pandas, matplotlib, seaborn, scikit-learn, sqlalchemy, pytest</li>
+											<li class="mb-2">numpy, pandas, matplotlib, seaborn, pymc3, scikit-learn, sqlalchemy, pytest, flask, django</li>
 										</ul>
 									</div><!--//item-->
 									<div class="item">
 										<h4 class="item-title">R</h4>
 										<ul class="list-unstyled resume-skills-list">
-											<li class="mb-2">dplyr, tidyr, ggplot2, flexdashboard, rmarkdown, bookdown</li>
+											<li class="mb-2">dplyr, tidyr, ggplot2, flexdashboard, rmarkdown, bookdown, rstan, rstanarm</li>
 										</ul>
 									</div><!--//item-->
 									<div class="item">
 										<h4 class="item-title">Databases</h4>
 										<ul class="list-unstyled resume-skills-list">
-											<li class="mb-2">Hive, PostgreSQL, Cassandra, S3</li>
+											<li class="mb-2">Databricks, Hive, PostgreSQL, Cassandra, S3</li>
 										</ul>
 									</div><!--//item-->
 									<div class="item">
 										<h4 class="item-title">Data Pipelines</h4>
 										<ul class="list-unstyled resume-skills-list">
-											<li class="mb-2">Prefect, Luigi, Jenkins, Boomi<li>
+											<li class="mb-2">Databricks, Luigi, Jenkins<li>
 										</ul>
 									</div><!--//item-->
 									<div class="item">
 										<h4 class="item-title">Cloud/Web</h4>
 										<ul class="list-unstyled resume-skills-list">
-											<li class="mb-2">AWS, GCP, Digital Ocean, django, django-rest-framework, AngularJS, HTML, CSS</li>
+											<li class="mb-2">AWS, GCP, Digital Ocean, HTML, CSS</li>
 										</ul>
 									</div><!--//item-->
 									<div class="item">
 										<h4 class="item-title">Dev Tools</h4>
 										<ul class="list-unstyled resume-skills-list">
 											<li class="mb-2">Git, GitHub, Docker, Sourcetree, Atom, RStudio, Bash, pyenv<li>
-										</ul>
-									</div><!--//item-->
-									<div class="item">
-										<h4 class="item-title">Stats/ML</h4>
-										<ul class="list-unstyled resume-skills-list">
-											<li class="mb-2">linear & logistic regression, decision tree, random forest, bayesian models (pymc3, stan)<li>
 										</ul>
 									</div><!--//item-->
 									<div class="item">
