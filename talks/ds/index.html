@@ -454,14 +454,14 @@ Geoff Rollins
 <p><br> <img data-src="images/patil0.png" data-fig-align="center"></p>
 
 <aside><div>
-<p><a href="https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century">https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century</a></p>
+<p><a href="https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century" class="uri">https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century</a></p>
 </div></aside></section>
 <section id="more-recently" class="slide level2">
 <h2>More recently</h2>
 <p><br> <img data-src="images/patil1.png" data-fig-align="center"></p>
 
 <aside><div>
-<p><a href="https://hbr.org/2022/07/is-data-scientist-still-the-sexiest-job-of-the-21st-century">https://hbr.org/2022/07/is-data-scientist-still-the-sexiest-job-of-the-21st-century</a></p>
+<p><a href="https://hbr.org/2022/07/is-data-scientist-still-the-sexiest-job-of-the-21st-century" class="uri">https://hbr.org/2022/07/is-data-scientist-still-the-sexiest-job-of-the-21st-century</a></p>
 </div></aside></section>
 <section id="ds-challenges-havent-changed" class="slide level2">
 <h2>DS challenges haven’t changed</h2>
@@ -472,7 +472,7 @@ Geoff Rollins
 </div>
 
 <aside><div>
-<p><a href="https://hbr.org/2022/07/is-data-scientist-still-the-sexiest-job-of-the-21st-century">https://hbr.org/2022/07/is-data-scientist-still-the-sexiest-job-of-the-21st-century</a></p>
+<p><a href="https://hbr.org/2022/07/is-data-scientist-still-the-sexiest-job-of-the-21st-century" class="uri">https://hbr.org/2022/07/is-data-scientist-still-the-sexiest-job-of-the-21st-century</a></p>
 </div></aside></section>
 <section id="ds-is-mostly-data-wrangling" class="slide level2">
 <h2>DS is mostly data wrangling</h2>
@@ -483,7 +483,7 @@ Geoff Rollins
 </div>
 
 <aside><div>
-<p><a href="https://databased.pedramnavid.com/">https://databased.pedramnavid.com/</a></p>
+<p><a href="https://databased.pedramnavid.com/" class="uri">https://databased.pedramnavid.com/</a></p>
 </div></aside></section>
 <section id="typical-etl-data-flow" class="slide level2">
 <h2>Typical ETL data flow</h2>
@@ -494,7 +494,7 @@ Geoff Rollins
 </div>
 
 <aside><div>
-<p><a href="https://medium.com/pier-stories/how-to-organize-your-data-lake-warehouse-miniseries-553348df043d">https://medium.com/pier-stories/how-to-organize-your-data-lake-warehouse-miniseries-553348df043d</a></p>
+<p><a href="https://medium.com/pier-stories/how-to-organize-your-data-lake-warehouse-miniseries-553348df043d" class="uri">https://medium.com/pier-stories/how-to-organize-your-data-lake-warehouse-miniseries-553348df043d</a></p>
 </div></aside></section>
 <section id="there-are-usually-many-many-tables" class="slide level2">
 <h2>There are usually many, many tables</h2>
@@ -505,7 +505,7 @@ Geoff Rollins
 </div>
 
 <aside><div>
-<p><a href="https://medium.com/pier-stories/how-to-organize-your-data-lake-warehouse-miniseries-553348df043d">https://medium.com/pier-stories/how-to-organize-your-data-lake-warehouse-miniseries-553348df043d</a></p>
+<p><a href="https://medium.com/pier-stories/how-to-organize-your-data-lake-warehouse-miniseries-553348df043d" class="uri">https://medium.com/pier-stories/how-to-organize-your-data-lake-warehouse-miniseries-553348df043d</a></p>
 </div></aside></section>
 <section id="big-data-is-big" class="slide level2">
 <h2>Big data is big</h2>
@@ -517,7 +517,7 @@ Geoff Rollins
 </section>
 <section id="big-data-sets-require-different-workflows-than-small-data-sets" class="slide level2 smaller">
 <h2>Big data sets require different workflows than small data sets</h2>
-<p>often a lot of pre-processing (in SQL or Python) before you do analysis and modeling (in Python or R)</p>
+<p>Often there’s a lot of pre-processing (in SQL or Python) before you do analysis and modeling (in Python or R):</p>
 <ul>
 <li><strong>cleaning:</strong> replace country code with country name</li>
 <li><strong>joining:</strong> join list of daily active users with click event data</li>
@@ -541,10 +541,10 @@ Geoff Rollins
 <span id="cb1-11"><a href="#cb1-11"></a><span class="kw">INSERT</span> OVERWRITE <span class="kw">TABLE</span> daily_edit_activity_by_signup_cohort <span class="kw">PARTITION</span> (<span class="dt">day</span> <span class="op">=</span> <span class="st">'2024-05-01'</span>)</span>
 <span id="cb1-12"><a href="#cb1-12"></a><span class="kw">SELECT</span></span>
 <span id="cb1-13"><a href="#cb1-13"></a>  u.signup_day,</span>
-<span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> bc.userid) <span class="kw">AS</span> user_count</span>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> bc.user_id) <span class="kw">AS</span> user_count</span>
 <span id="cb1-15"><a href="#cb1-15"></a><span class="kw">FROM</span> button_clicks bc</span>
 <span id="cb1-16"><a href="#cb1-16"></a><span class="kw">JOIN</span> users u <span class="kw">ON</span> bc.user_id <span class="op">=</span> u.user_id</span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="kw">GROUP</span> <span class="kw">BY</span> <span class="kw">ALL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="understand-your-customers" class="slide level2">
@@ -564,7 +564,7 @@ Geoff Rollins
 </div>
 
 <aside><div>
-<p><a href="https://www.dave-bailey.com/blog/scale-up-organisation">https://www.dave-bailey.com/blog/scale-up-organisation</a></p>
+<p><a href="https://www.dave-bailey.com/blog/scale-up-organisation" class="uri">https://www.dave-bailey.com/blog/scale-up-organisation</a></p>
 </div></aside></section>
 <section id="understand-the-org-chart-1" class="slide level2">
 <h2>Understand the org chart</h2>
@@ -575,7 +575,7 @@ Geoff Rollins
 </div>
 
 <aside><div>
-<p><a href="https://riverin.substack.com/p/the-canonical-startup-org-structure">https://riverin.substack.com/p/the-canonical-startup-org-structure</a></p>
+<p><a href="https://riverin.substack.com/p/the-canonical-startup-org-structure" class="uri">https://riverin.substack.com/p/the-canonical-startup-org-structure</a></p>
 </div></aside></section>
 <section id="get-to-know-your-xfunc-partners" class="slide level2">
 <h2>Get to know your xfunc partners</h2>
@@ -586,7 +586,7 @@ Geoff Rollins
 </div>
 
 <aside><div>
-<p><a href="https://blog.academyofpm.com/p/product-teams">https://blog.academyofpm.com/p/product-teams</a></p>
+<p><a href="https://blog.academyofpm.com/p/product-teams" class="uri">https://blog.academyofpm.com/p/product-teams</a></p>
 </div></aside></section>
 <section id="tip-on-ds-job-searching" class="slide level2">
 <h2>Tip on DS job searching</h2>
@@ -616,7 +616,7 @@ Geoff Rollins
 
 </div>
 <aside><div>
-<p><a href="https://www.weather.gov/lot/weatherstory">https://www.weather.gov/lot/weatherstory</a></p>
+<p><a href="https://www.weather.gov/lot/weatherstory" class="uri">https://www.weather.gov/lot/weatherstory</a></p>
 </div></aside></section>
     </div>
   </div>
