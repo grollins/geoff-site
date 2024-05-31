@@ -485,8 +485,8 @@ Geoff Rollins
 <aside><div>
 <p><a href="https://databased.pedramnavid.com/" class="uri">https://databased.pedramnavid.com/</a></p>
 </div></aside></section>
-<section id="typical-etl-data-flow" class="slide level2">
-<h2>Typical ETL data flow</h2>
+<section id="typical-data-flow" class="slide level2">
+<h2>Typical data flow</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/data-lake-etl.png" style="width:80.0%"></p>
@@ -541,10 +541,11 @@ Geoff Rollins
 <span id="cb1-11"><a href="#cb1-11"></a><span class="kw">INSERT</span> OVERWRITE <span class="kw">TABLE</span> daily_edit_activity_by_signup_cohort <span class="kw">PARTITION</span> (<span class="dt">day</span> <span class="op">=</span> <span class="st">'2024-05-01'</span>)</span>
 <span id="cb1-12"><a href="#cb1-12"></a><span class="kw">SELECT</span></span>
 <span id="cb1-13"><a href="#cb1-13"></a>  u.signup_day,</span>
-<span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> bc.user_id) <span class="kw">AS</span> user_count</span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="kw">FROM</span> button_clicks bc</span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="kw">JOIN</span> users u <span class="kw">ON</span> bc.user_id <span class="op">=</span> u.user_id</span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> u.user_id) <span class="kw">AS</span> signup_user_count,</span>
+<span id="cb1-15"><a href="#cb1-15"></a>  <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> bc.user_id) <span class="kw">AS</span> clicked_user_count</span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="kw">FROM</span> users u</span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> button_clicks bc <span class="kw">ON</span> bc.user_id <span class="op">=</span> u.user_id</span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="understand-your-customers" class="slide level2">
